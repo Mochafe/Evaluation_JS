@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="img/jarditou_logo.jpg" alt="Logo jarditou">
+        <span class="title-header">Tout le jardin</span> 
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" title="Vers l'accueil">Accueil</a></li>
+            <li><a href="tableau.html" title="Vers le tableau">Tableau</a></li>
+            <li><a href="contact.html" title="Vers les contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <img class="promotion" src="img/promotion.jpg" alt="Promotion sur lames de terrase">
+    
+    <h1>Contact</h1>
+    <hr>
+    <br>
+    <p><span class="error-sign">*</span> Ces zones sont obligatoires</p>
+
+    <div class="form-wrapper">
+        <form action="http://bienvu.net/script.php" method="post" name="contact">
+            <fieldset name="avoid">
+                <legend>Vos coordonnées</legend>
+                <div class="fields-wrapper">
+                    <div class="field-wrapper">
+                        <label for="name">Votre nom<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+                            <input type="text" name="name" id="name" maxlength="32" autocomplete="given-name">
+                            <span class="error" id="name-error">Erreur</span>
+                        </div>
+                    </div>
+                    
+                    <div class="field-wrapper">
+                        <label for="first_name">Votre prénom<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+                            <input type="text" name="first_name" id="first_name" maxlength="32" autocomplete="family-name">
+                            <span class="error" id="first_name-error">Erreur</span>
+                        </div>
+                    </div>
+                        
+                    <div class="field-wrapper">
+                        <label>Sexe<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+                            <div class="radio">
+                                <input type="radio" name="sex" id="female" value="female"><label for="female">Féminin</label>
+                                <input type="radio" name="sex" id="male" value="male"><label for="male">Masculin</label>
+                            </div>
+                                <span class="error" id="sex-error">Erreur</span>
+                        </div>
+                    </div>
+        
+                    
+
+                    <div class="field-wrapper">
+                        <label for="birth_day">Date de naissance<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+
+                                <input type="date" name="birth_day" id="birth_day" autocomplete="bday">                        
+                            <span class="error" id="birth_day-error">Erreur</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="field-wrapper">
+                        <label for="zip">Code postal<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+                            <input type="text" name="zip" id="zip" maxlength="5" autocomplete="postal-code">
+                            <span class="error" id="zip-error">Erreur</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="field-wrapper">
+                        <label for="address">Adresse : </label>
+                        <div class="input-wrapper">
+                            <input type="text" name="address" id="address" maxlength="128" autocomplete="street-address">
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="field-wrapper">
+                        <label for="city">Ville : </label>
+                        <div class="input-wrapper">
+                            <input type="text" name="city" id="city" maxlength="64">
+                        </div>
+                    </div>
+
+                    <div class="field-wrapper">
+                        <label for="mail">Email<span class="error-sign">*</span> : </label>
+                        <div class="input-wrapper">
+                            <input type="email" name="mail" id="mail" maxlength="128">
+                            <span class="error" id="mail-error">Erreur</span>
+                        </div>
+                    </div>                   
+                </div>
+               
+            </fieldset>
+    
+            <br>
+    
+            <fieldset name="avoid">
+                <legend>Votre demande</legend>
+                
+                <div class="field-wrapper">
+                    <label for="object">Sujet<span class="error-sign">*</span> : </label>
+                    <div class="input-wrapper">
+                        <select name="object" id="object">
+                            <option value="" selected>Veuillez séléctionner un sujet</option>
+                            <option value="commands">Mes commandes</option>
+                            <option value="complaint">Réclamation</option>
+                            <option value="other">Autres</option>
+                        </select>
+                        <span class="error" id="object-error">Erreur</span>
+                    </div>
+                </div>                   
+
+                <div class="field-wrapper">
+                    <label for="ask">Votre question<span class="error-sign">*</span> : </label>
+                    <div class="input-wrapper">
+                        <textarea name="ask" id="ask"></textarea>
+                        <span class="error" id="ask-error">Erreur</span>
+                    </div>
+                </div> 
+
+                
+            </fieldset>
+    
+            <div class="field-wrapper">
+                <input type="checkbox" name="accept" id="accept">
+                <label for="accept"><span class="error-sign">*</span> J'accepte le traitement informatique de ce formulaire</label>      
+            </div> 
+            <span class="error" id="accept-error">Erreur</span>  
+            <input type="button" value="Envoyer" id="send-btn"><input type="button" value="Annuler" id="cancel-btn">
+        </form>  
+    </div>  
+    <footer>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="" title="Vers le mention légales">Mention légales</a></li>
+                <li><a href="" title="Vers les horaires">Horaires</a></li>
+                <li><a href="" title="Vers le plan du site">Plan du site</a></li>            
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
