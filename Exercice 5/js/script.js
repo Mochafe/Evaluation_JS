@@ -109,8 +109,6 @@ function clearForm(){
 //Style pour les erreurs
 let block = "display: block;";
 let none = "display: none;";
-//Formulaire
-let form = document.contact;
 
 //Boutons
 let send_btn = document.getElementById("send-btn");//Bouton d'envoye
