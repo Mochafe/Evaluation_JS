@@ -27,18 +27,8 @@ function searchName() {
 }
 
 function deleteName(index) {
-    tab[index] = "";
-
-    let buff = "";
-
-    for(let i = index; index < tab.length - 1; i++) {
-        if(i == tab.length - 1)
-            break;
-
-        buff = tab[i + 1];
-        tab[i + 1] = tab[i];
-        tab[i] = buff;
-    }
+    tab.splice(index, 1);
+    tab.push("");
 
     input.value = "";
 }
