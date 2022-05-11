@@ -42,7 +42,7 @@ function verifyForm() {
     }
 
 //Vérifie le champ [Email]
-    if(!mailFilter.test(form[9].value)) {
+    if(!mailFilter.test(form[9].value.toLowerCase())) {
         error = true;
         document.getElementById("mail-error").style = block;
     } else {
