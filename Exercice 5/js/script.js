@@ -1,4 +1,4 @@
-function verifyForm() {
+function verifyForm(e) {
     let error = false;//bool pour savoir si une erreur a eu lieu
 
 //Vérifie le champ [Votre nom]
@@ -74,8 +74,8 @@ function verifyForm() {
     }
 
 //Si il n'y a pas eu d'erreur envoi le formulaire
-    if(!error) {
-        form.submit();
+    if(error) {
+        e.preventDefault();
     }
 
 
@@ -124,5 +124,5 @@ let mailFilter = new RegExp(/^(([a-z]+)|(\d+)|(-|_|\.))+@[a-z]+\.[a-z]+$/);//Fil
 
 
 //EventListener
-send_btn.addEventListener("click", verifyForm);//Quand clic sur le bouton envoyer lance la fonction pour vérifier le formulaire et l'envoye si tous est correct
+send_btn.addEventListener("click", (e) => verifyForm(e));//Quand clic sur le bouton envoyer lance la fonction pour vérifier le formulaire et l'envoye si tous est correct
 cancel_btn.addEventListener("click", clearForm);//Qaund clic nettoye le formulaire
